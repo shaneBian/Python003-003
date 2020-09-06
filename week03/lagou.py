@@ -11,7 +11,7 @@ dbInfo = {
             'host' : 'localhost',
             'port' : 3306,
             'user' : 'root',
-            'password' : '52Tutu@mysql',
+            'password' : '*****',
             'db' : 'spiderDB'
         }
 
@@ -49,21 +49,26 @@ if __name__ == '__main__':
         bj = MyThread(i, "beijing")
         threads.append(bj)
         bj.start()
+    time.sleep(300)
  
     for i in range(24):
         sh = MyThread(i, "shanghai")
         threads.append(sh)
         sh.start()
+     time.sleep(300)
 
     for i in range(24):
         sz = MyThread(i, "shenzhen")
         threads.append(sz)
         sz.start()
+     time.sleep(300)
  
     for i in range(24):
         gz = MyThread(i, "guangzhou")
         threads.append(gz)
         gz.start()
+     time.sleep(300)
+
     for j in threads:
         j.join()
 
