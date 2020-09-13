@@ -27,7 +27,8 @@ print(df['id'].count())
 # 5. SELECT * FROM data WHERE id<1000 AND age>30;
 print(df[ (df['id'] > 30) & (df['id'] < 1000) ])
 # 6. SELECT id,COUNT(DISTINCT order_id) FROM table1 GROUP BY id;
-print(df.groupby('id').nunique())
+print(df.groupby('id').nunique().iloc[:, [1]])
+exit()
 # 7. SELECT * FROM table1 t1 INNER JOIN table2 t2 ON t1.id = t2.id;
 print(pd.merge(df1, df2, on='id'))
 # 8. SELECT * FROM table1 UNION SELECT * FROM table2;
