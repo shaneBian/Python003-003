@@ -20,6 +20,7 @@ df2 = pd.DataFrame(sales)
 print(df)
 # 2. SELECT * FROM data LIMIT 10;
 print(df[1:3])
+#print(df[1:11])
 # 3. SELECT id FROM data;  //id 是 data 表的特定一列
 print(df['id'])
 # 4. SELECT COUNT(id) FROM data;
